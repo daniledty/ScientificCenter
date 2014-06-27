@@ -1,0 +1,25 @@
+﻿<extend name="base" />
+<block name="content">
+<div>
+<div class="ui-field-contain">
+    <label for="patent-title">专利名称</label>    
+    <input type="text" name="patent-title" />
+</div>
+<div class="ui-field-contain">
+    <fieldset data-role="controlgroup">
+        <legend>所属领域</legend>
+        <label><input type="checkbox" name="computer">计算机</label>
+        <label><input type="checkbox" name="biomedical">生物</label>
+		<label><input type="checkbox" name="architecture">建筑</label>
+    </fieldset>
+</div>
+</br>
+<div class="ui-field-contain">
+	<label for="patent-info">专利简介：</label>
+	</br>
+	<textarea name="info" id="patent-info"></textarea>
+</div>
+	
+<a href="patent_info" data-ajax="false"data-role="button">发布</a>
+</div>
+</block>

@@ -1,0 +1,43 @@
+﻿<extend name="base" />
+<block name="head">
+<style>
+.controlgroup-search {
+    padding-top:.22em;
+    padding-bottom:.22em;
+}
+.content_item
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+</style>
+</block>
+<block name="content">
+<div class="ui-content">
+<div class="ui-body ui-body-a ui-corner-all content_item">
+<div data-role="controlgroup" data-type="horizontal">
+    <select>
+    <option>计算机</option>
+    <option>生物</option>
+    </select>
+    <input type="search" data-wrapper-class="controlgroup-search ui-btn" />
+    <input id="search" type="submit" value="搜索" />
+</div>
+</div>
+<div id="display" style="display: none;">
+    <ul data-role="listview" data-inset="true">
+    <li>PageRank</li>
+    <li>关联规则分析</li>
+    </ul>
+</div>
+</div>
+</block>
+<block name="script">
+<script>
+    $(document).ready(function () {
+        $('#search').click(function(){
+            $('#display').css('display', 'block');
+        });
+    });
+</script>
+</block>
