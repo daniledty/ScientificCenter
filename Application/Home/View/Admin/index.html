@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="__PUBLIC__/js/jquery-ui-1.11.0/jquery-ui.min.css">
+<script src="__PUBLIC__/js/jquery-ui-1.11.0/external/jquery/jquery.js"></script>
+<script src="__PUBLIC__/js/jquery-ui-1.11.0/jquery-ui.min.js"></script>
+
+<style>
+    body {
+        font-family: 微软雅黑;
+        background-color: #f0f0f0;
+        margin: 0px;
+    }
+    .header {
+        background-color: #e0e0e0;
+        text-align: center;
+        line-height: 90px;
+        font-size: 60px;
+    }
+    .left {
+        float: left;
+        width: 20%;
+        height: 100%;
+    }
+    .content {
+        float: left;
+        width: 80%;
+        background-color: #fafafa;
+        font-size:30px;
+        
+    }
+    .footer {
+        background-color: black;    
+        clear: both;
+        font-size: 20px;
+    }
+    #txtTitle {
+        width: 60%;
+        font-size: 20px;
+    }
+    #txtBody {
+        width: 60%;
+        height: 300px;
+        font-size: 20px;
+    }
+    .cw div {
+        margin-top:10px;
+    }
+</style>
+
+</head>
+<body>
+    <div>
+        <div class="header">管理控制台</div>
+        <div class="left">
+            <ul>
+                <li><a href="javascript:void(0);">发布微记录</a></li>
+            </ul>
+        </div>
+        <div class="content">
+        <div class="cw" style="padding: 10px 10px;">
+            <form action="publish" method="POST">
+            <div>标题</div>
+            <div><input id="txtTitle" name='title' type="text" /></div>
+            <div>内容</div>
+            <div><textarea id="txtBody" name='body'></textarea></div>
+            <div><input id="btnPublish" type="submit" value="发布"/></div>
+            </form>
+        </div>
+        </div>
+        <div class="footer">页脚</div>
+    </div>
+<script>
+    $(document).ready(function () {
+        $('#btnPublish').button();
+    });
+</script>
+</body>
+</html>
