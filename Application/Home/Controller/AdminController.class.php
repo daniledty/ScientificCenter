@@ -32,7 +32,7 @@ class AdminController extends Controller {
         
         
         foreach ($users as $user) {
-            $message = sprintf('{"touser":"%s","msgtype":"news","news":{"articles":[{"title":"%s","description":"%s","url":"https://www.baidu.com/","picurl":"http://www.baidu.com/img/baidu_sylogo1.gif"}]}}',
+            $message = sprintf('{"touser":"%s","msgtype":"news","news":{"articles":[{"title":"%s","description":"%s","url":"http://www.baidu.com/","picurl":"http://www.baidu.com/img/baidu_sylogo1.gif"}]}}',
                 $user, $_POST['title'], $_POST['body']);
             $ch = curl_init();
             $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$access_token;
